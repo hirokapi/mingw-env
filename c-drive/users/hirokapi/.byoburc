@@ -1,0 +1,7 @@
+export VTE_CJK_WIDTH=1
+
+if [ -e /usr/share/byobu ]; then
+  export BYOBU_PREFIX='/usr'
+elif [ -e /mingw64/share/byobu ]; then
+  export BYOBU_PREFIX='/mingw64'
+fi

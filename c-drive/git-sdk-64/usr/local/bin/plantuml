@@ -1,0 +1,7 @@
+#!/bin/bash
+clear
+export PU_TMP="`echo $@``date '+%Y%m%d%T' | tr -d :`" > /dev/null
+cat $@ | nkf -Ws -Lw > ${PU_TMP}
+java -jar ~/.vim/jar/plantuml.jar -tpng -overwrite ${PU_TMP} > /dev/null
+rm ${PU_TMP} > /dev/null
+#start "`echo $@ | sed -e 's/\.[^\.]*//g'`.png"

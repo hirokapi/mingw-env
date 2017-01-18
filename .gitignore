@@ -1,0 +1,7 @@
+/.vim/dein/.dein
+/.vim/dein/merged
+/.vim/dein/temp
+/.vim/dein/rollbacks
+/.vim/dein/repos
+/.vim/tmp/*  
+!.gitkeep
