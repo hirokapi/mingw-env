@@ -21,6 +21,9 @@
         - `npm install -g eslint`
         - `npm install --save-dev eslint`
             - ※ `eslint-cli` をグローバル インストールしておくと `--save-dev` でインストールした ESLint を実行する eslint コマンド が使えるようになる
+    - Reference
+        - `npm dedupe --no-bin-links --save`
+        - `npm install --no-bin-links`
 
 - Git for Windows SDK
     - https://github.com/git-for-windows/build-extra/releases
