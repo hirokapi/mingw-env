@@ -273,13 +273,16 @@
     - `# update-grub`
     - `# init 6`
 - 共有フォルダの作成
-    - ホストマシンの VirtualBox の設定で共有フォルダ `/c/workspace/` を `workspace` で作成する
+    - ホストマシンの VirtualBox の設定で共有フォルダ `/mnt/vbox/${USERNAME}/` を `${USERNAME}` で作成する
     - `$ sudo su -`
-    - `# mkdir /workspace`
-    - `# chmod 777 /workspace`
-    - `# mount -t vboxsf workspace /home/${USERNAME}/workspace -o uid=$UID,gid=$GID,fmode=644,dmode=755`
+    - `# mkdir /mnt/vbox`
+    - `# chmod 777 /mnt/vbox`
+    - `# exit`
+    - `$ mkdir /mnt/vbox/${USERNAME}`
+    - `$ sudo su -`
+    - `# mount -t vboxsf ${USERNAME} /mnt/vbox/${USERNAME} -o uid=$UID,gid=$GID,fmode=644,dmode=755`
     - `# vim /etc/rc.local`
-        - exit の前に `mount -t vboxsf workspace /home/${USERNAME}/workspace -o uid=$UID,gid=$GID,fmode=644,dmode=755` を追記
+        - exit の前に `mount -t vboxsf ${USERNAME} /mnt/vbox/${USERNAME} -o uid=$UID,gid=$GID,fmode=644,dmode=755`` を追記
     - `# init 6`
 - MySQL 5.6 ( ≒ AWS Aurora )
     - Install

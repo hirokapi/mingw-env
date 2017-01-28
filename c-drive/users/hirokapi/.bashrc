@@ -15,7 +15,7 @@ fi
 # byobu の初期化
 if test -e ~/.byoburc; then source ~/.byoburc; fi
 
-if [ -n "$BYOBU_CONFIG_DIR" ]; then
-  cd /c/workspace/
-  sshpass -p ${PASSWORD} ssh -p 2222 ${USERNAME}@localhost
-fi
+#if [ -n "$BYOBU_CONFIG_DIR" ]; then
+#  cd ${USERPROFILE}/Desktop/workspace/
+#  sshpass -p ${PASSWORD} ssh -p 2222 ${USERNAME}@localhost
+#fi
