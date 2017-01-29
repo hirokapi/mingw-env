@@ -2,6 +2,13 @@
 
 ## How to setup
 
+- Add Windows Environment
+    - `setx HOME ^%USERPROFILE^%`
+    - `setx CHERE_INVOKING enabled_from_arguments`
+    - `setx MSYS2_PATH_TYPE inherit`
+    - `setx MSYSTEM MINGW64`
+    - `setx WD "C:\git-sdk-64\usr\bin\\"`
+
 - Visual C++ Build Tools (for Windows)
     - http://go.microsoft.com/fwlink/?LinkId=691126
 
@@ -386,9 +393,9 @@
         - https://github.com/burntsushi/erd
     - Install
         - Add Windows Environment
-            - set http_proxy="http://proxy:port"
-            - set https_proxy="http://proxy:port"
-            - set no_proxy="localhost"
+            - `setx http_proxy "http://proxy:port" -m`
+            - `setx https_proxy "http://proxy:port" -m`
+            - `setx no_proxy "localhost" -m`
         - Haskell Platform
             - https://www.haskell.org/platform/windows.html
                 - haskellplatform-8.0.1-full-x86_64-setup-a.exe
