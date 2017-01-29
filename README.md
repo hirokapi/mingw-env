@@ -281,15 +281,18 @@
     - `# init 6`
 - 共有フォルダの作成
     - ホストマシンの VirtualBox の設定で共有フォルダ `/mnt/vbox/${USERNAME}/` を `${USERNAME}` で作成する
+    - ホストOS側の共有フォルダの自動マウント設定を OFF にして仮想マシンを再起動する
     - `$ sudo su -`
     - `# mkdir /mnt/vbox`
     - `# chmod 777 /mnt/vbox`
     - `# exit`
     - `$ mkdir /mnt/vbox/${USERNAME}`
     - `$ sudo su -`
-    - `# mount -t vboxsf ${USERNAME} /mnt/vbox/${USERNAME} -o uid=$UID,gid=$GID,fmode=644,dmode=755`
-    - `# vim /etc/rc.local`
-        - exit の前に `mount -t vboxsf ${USERNAME} /mnt/vbox/${USERNAME} -o uid=$UID,gid=$GID,fmode=644,dmode=755`` を追記
+    - `# vim /etc/fstab`  
+      > # VirtualBox  
+      > ${USERNAME}  /mnt/vbox/${USERNAME}  vboxsf  fmode=0644,dmode=0755,uid=${UID},gid=${GID}  0  0
+    - `# vim /etc/modules`  
+      > vboxsf
     - `# init 6`
 - MySQL 5.6 ( ≒ AWS Aurora )
     - Install
