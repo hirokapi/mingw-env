@@ -16,6 +16,6 @@ fi
 if test -e ~/.byoburc; then source ~/.byoburc; fi
 
 #if [ -n "$BYOBU_CONFIG_DIR" ]; then
-#  cd ${USERPROFILE}/Desktop/workspace/
 #  sshpass -p ${PASSWORD} ssh -p 2222 ${USERNAME}@localhost
+#  exit
 #fi

@@ -8,6 +8,9 @@
     - `setx MSYS2_PATH_TYPE inherit`
     - `setx MSYSTEM MINGW64`
     - `setx WD "C:\git-sdk-64\usr\bin\\"`
+    - `setx http_proxy "http://proxy:port" -m`
+    - `setx https_proxy "http://proxy:port" -m`
+    - `setx noproxy "localhost" -m`
 
 - Visual C++ Build Tools (for Windows)
     - http://go.microsoft.com/fwlink/?LinkId=691126
@@ -280,7 +283,7 @@
     - `# update-grub`
     - `# init 6`
 - 共有フォルダの作成
-    - ホストマシンの VirtualBox の設定で共有フォルダ `/mnt/vbox/${USERNAME}/` を `${USERNAME}` で作成する
+    - ホストマシンの VirtualBox の設定で共有フォルダ `${USERPROFILE}/Desktop/vbox/${USERNAME}/` を `${USERNAME}` で作成する
     - ホストOS側の共有フォルダの自動マウント設定を OFF にして仮想マシンを再起動する
     - `$ sudo su -`
     - `# mkdir /mnt/vbox`
@@ -395,10 +398,6 @@
     - 本家 URL
         - https://github.com/burntsushi/erd
     - Install
-        - Add Windows Environment
-            - `setx http_proxy "http://proxy:port" -m`
-            - `setx https_proxy "http://proxy:port" -m`
-            - `setx no_proxy "localhost" -m`
         - Haskell Platform
             - https://www.haskell.org/platform/windows.html
                 - haskellplatform-8.0.1-full-x86_64-setup-a.exe

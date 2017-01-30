@@ -1,0 +1,10 @@
+[user]
+  name = username
+  email = name@domain
+[http]
+  proxy = http://proxy:port
+[https]
+  proxy = http://proxy:port
+[core]
+  autoCRLF = false
+  editor = vim -c \"set fenc=utf-8\"
