@@ -10,7 +10,7 @@
     - `setx WD "C:\git-sdk-64\usr\bin\\"`
     - `setx http_proxy "http://proxy:port" -m`
     - `setx https_proxy "http://proxy:port" -m`
-    - `setx noproxy "localhost" -m`
+    - `setx no_proxy "localhost" -m`
 
 - Visual C++ Build Tools (for Windows)
     - http://go.microsoft.com/fwlink/?LinkId=691126
