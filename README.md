@@ -268,7 +268,7 @@
           > PauseShutdown=5000  
           >
           > [Vm0]  
-          > VmName=Ubuntu  
+          > VmName=Debian
           > ShutdownMethod=savestate  
           > AutoStart=yes
         - `C:\vms> VmServiceControl.exe -u`
@@ -355,7 +355,37 @@
             - UDP でホスト側を 3306 、ゲスト側を 3306 に設定追加
         - ホストから User:root, Password:****, localhost:3306 で接続可能になる
 
-## (Deprecated) Ubuntu に tmux-2.2 をインストール
+## Debian 系 OS のセットアップ
+
+- Install
+    - 最小構成でインストールを行う（チェックボックスを全て外す）
+
+- Setup
+    - `# curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
+    - `# apt-get install -y nodejs`
+    - `# apt-get install ssh`
+    - `# apt-get install vim`
+    - `# apt-get install git`
+    - `# apt-get install inittab`
+    - `# apt-get install sysv-rc-conf`
+    - `# apt-get install gcc make kernel-devel`
+    - `# apt-get install dselect`
+    - `# dselect`
+    - `# export KERN_DIR=/usr/src/linux-headers-3.16.0-4-amd64/`
+    - `# mount -r /dev/cdrom /media/cdrom`
+    - `# cd /media/cdrom`
+    - `# sh ./VBoxLinuxAdditions.run `
+    - `# vim /etc/fstab `
+    - `# vim /etc/modules`
+    - `# vim /etc/rc.local `
+    - `# vim /etc/inittab`
+    - `# vim /etc/default/grub `
+    - `# update-grub`
+    - `# python -m pip install --upgrade pip`
+    - `$ vim .gitconfig `
+    - `$ vim .ssh/config `
+
+## (Deprecated) Debian 系 OS に tmux-2.2 をインストール
 
 - root になる
     - `$ sudo su -`
@@ -376,7 +406,7 @@
     - `# make`
     - `# make install`
 
-## 起動スクリプトが無いミドルウェアのデーモン化（VM上のUbuntuを想定）
+## 起動スクリプトが無いミドルウェアのデーモン化（VM上 Debian 系 OS を想定）
 
 - `$ sudo apt-get install supervisor`
 - `$ sudo vim /etc/supervisor/conf.d/${MIDDLEWARE_NAME}.conf`  
