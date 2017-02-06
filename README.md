@@ -371,6 +371,24 @@
     - `# apt-get install gcc make kernel-devel`
     - `# apt-get install dselect`
     - `# dselect`
+        - `install aptitude`
+        - `install curl`
+        - `install linux-base`
+        - `install linux-compiler-gcc`
+        - `install linux-headers`
+        - `install linux-image`
+        - `install linux-kbuild`
+        - `install linux-libc-dev`
+        - `install linux-source`
+        - `install nkf`
+        - `install python-pip`
+        - `install python2.7`
+        - `install rsync`
+        - `install sudo`
+        - `install unzip`
+        - `install util-linux`
+        - `install wget`
+        - `install zip`
     - `# export KERN_DIR=/usr/src/linux-headers-3.16.0-4-amd64/`
     - `# mount -r /dev/cdrom /media/cdrom`
     - `# cd /media/cdrom`
