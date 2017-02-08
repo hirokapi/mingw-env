@@ -70,6 +70,9 @@ repo = 'Shougo/neocomplcache'
 repo = 'cohama/agit.vim'
 
 [[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
 repo = 'idanarye/vim-merginal'
 
 [[plugins]]
